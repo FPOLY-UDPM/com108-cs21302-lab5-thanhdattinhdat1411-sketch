@@ -12,12 +12,27 @@
 
 #include <stdio.h>
 
-//Tạo hàm 
+void hoanVi(int *a, int *b) {
+    *a = *a + *b;
+    *b = *a - *b;
+    *a = *a - *b;
+}
 
 int main() {
+    int a, b;
 
-    // //Gọi hàm trong hàm main 
-    
+    printf("Nhap a: ");
+    scanf("%d", &a);
+    printf("Nhap b: ");
+    scanf("%d", &b);
+
+    hoanVi(&a, &b);
+
+    printf("Sau khi hoan vi:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
     return 0;
 }
+
 
